@@ -1,0 +1,23 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f0f4f8; --surface: #fff; --border: #dde3ec;
+  --text: #1a202c; --muted: #64748b; --primary: #6366f1;
+  --primary-h: #4f46e5; --radius: 8px;
+  --novo: #3b82f6;     --novo-bg: #eff6ff;
+  --contatado: #8b5cf6; --contatado-bg: #f5f3ff;
+  --reuniao: #f59e0b;  --reuniao-bg: #fffbeb;
+  --proposta: #10b981; --proposta-bg: #ecfdf5;
+  --convertido: #059669; --convertido-bg: #d1fae5;
+  --perdido: #ef4444;  --perdido-bg: #fef2f2;
+}
+body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; }
+button { cursor: pointer; font-family: inherit; font-size: 13px; border: none;
+  border-radius: var(--radius); padding: 6px 14px; transition: opacity .15s, background .15s; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+input, select, textarea { font-family: inherit; font-size: 13px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 7px 10px; outline: none; background: var(--surface);
+  color: var(--text); transition: border-color .15s; }
+input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+textarea { resize: vertical; min-height: 80px; }
