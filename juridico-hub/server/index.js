@@ -7,6 +7,9 @@ const path = require('path');
 const leadsRouter = require('./routes/leads');
 const qualifyRouter = require('./routes/qualify');
 const monitorRouter = require('./routes/monitor');
+const deadlinesRouter = require('./routes/deadlines');
+const ferramentasRouter = require('./routes/ferramentas');
+const whatsappRouter = require('./routes/whatsapp');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,6 +30,9 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api/leads', leadsRouter);
 app.use('/api/qualify', qualifyRouter);
 app.use('/api/monitor', monitorRouter);
+app.use('/api/deadlines', deadlinesRouter);
+app.use('/api/ferramentas', ferramentasRouter);
+app.use('/api/whatsapp', whatsappRouter);
 
 app.get('/api/health', (req, res) =>
   res.json({ status: 'ok', timestamp: new Date().toISOString() })
